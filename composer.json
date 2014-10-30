@@ -1,0 +1,30 @@
+{
+    "name": "acseo/sql-server-bundle",
+    "type": "symfony-bundle",
+    "description": "Bundle used to provide data type convertion between Doctrine and MSSQLDriver",
+    "keywords": ["Symfony", "graphic", "sqlserver", "msssql", "doctrine"],
+    "homepage": "https://github.com/acseo/SQLServerBundle",
+    "authors": [
+        {
+            "name": "Hubert MARIN",
+            "email": "Hubert.Marin@acseo-conseil.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": ">=2.0.0"
+    },
+    "suggest": {
+
+    },
+    "autoload": {
+        "psr-0": { "ACSEO\\Bundle\\SQLServerBundle": "" }
+    },
+    "target-dir": "ACSEO/Bundle/SQLServerBundle",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3-dev"
+        }
+    }
+}
