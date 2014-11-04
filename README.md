@@ -55,6 +55,16 @@ types:
     datetime: ACSEO\Bundle\SQLServerBundle\Type\DateTimeType
     text: ACSEO\Bundle\SQLServerBundle\Type\TextType
 ```
+### In composer.json
+Add post-install-cmd to add pdo_dblib line to Doctrine DBAL Driver Manager
+```json
+"post-install-cmd": [
+            ...
+            "ACSEO\\Bundle\\SQLServerBundle\\Composer\\ScriptHandler::updateDoctrineDriverManager",
+            ...
+        ],
+```
+
 ## TODO
 
 * write tests
