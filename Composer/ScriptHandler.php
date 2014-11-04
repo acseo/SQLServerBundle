@@ -24,7 +24,7 @@ class ScriptHandler
      */
     public static function updateDoctrineDriverManager(CommandEvent $event)
     {
-        $command = "if ! grep --quiet pdo_dblib vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php; then (sed -i -e \"s/\$_driverMap = array(/\$_driverMap = array(\\n            \\/* Patch ACSEO via composer install *\\/\\n            \\'pdo_dblib\\' => \\'Doctrine\\DBAL\\Driver\\PDODblibSqlsrv\\Driver\\',\\n            \\/* Fin Patch *\\/\\n/g\" vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php) fi";
+        $command = "if ! grep --quiet pdo_dblib vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php; then (sed -i -e \"s/\$_driverMap = array(/\$_driverMap = array(\\n            \\/* Patch ACSEO via composer install *\\/\\n            \\'pdo_dblib\\' => \\'Doctrine\/DBAL\/Driver\/PDODblibSqlsrv\/Driver\\',\\n            \\/* Fin Patch *\\/\\n/g\" vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php) fi";
 
         exec($command);
     }
